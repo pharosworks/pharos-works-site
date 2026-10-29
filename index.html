@@ -1,135 +1,249 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Pharos Works | Websites for local businesses in Pune</title>
-<meta name="description" content="Fast, secure websites for cafes, gyms, clinics and other local businesses in Pune. Every site includes a public status page.">
-<meta name="theme-color" content="#0B1F3A">
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap">
-<link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pharos Works | Websites for local businesses in Pune</title>
+  <meta name="description" content="Fast, secure websites for cafes, gyms, clinics, coaching classes and salons in Pune. Monitored around the clock, with a public uptime page.">
+  <meta name="theme-color" content="#0A0D16">
+  <meta property="og:title" content="Pharos Works | Websites that stay online">
+  <meta property="og:description" content="Fast, secure websites for local businesses in Pune. Monitored around the clock.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-<a class="skip" href="#main">Skip to content</a>
-<header class="top">
-  <div class="wrap">
-    <a class="brand" href="#">
-      <svg width="28" height="28" viewBox="0 0 64 64" aria-hidden="true"><path d="M26 54l4-26h4l4 26z" fill="#F4F1EA"/><path d="M28.4 40h7.2l.6 4h-8.4z" fill="#F5A623"/><rect x="27" y="22" width="10" height="7" rx="1.5" fill="#F5A623"/><path d="M26 22l6-6 6 6z" fill="#F4F1EA"/></svg>
-      Pharos Works
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <linearGradient id="pg" x1="12" y1="10" x2="108" y2="110" gradientUnits="userSpaceOnUse">
+        <stop offset="0" stop-color="#4F6BFF"/>
+        <stop offset="1" stop-color="#8A4DFF"/>
+      </linearGradient>
+      <symbol id="mark" viewBox="0 0 120 120">
+        <rect x="8" y="8" width="104" height="104" rx="30" fill="url(#pg)"/>
+        <path d="M47 38 27 60 47 82" fill="none" stroke="#fff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M73 38 93 60 73 82" fill="none" stroke="#fff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="60" cy="60" r="12.5" fill="none" stroke="#fff" stroke-opacity=".45" stroke-width="2"/>
+        <circle cx="60" cy="60" r="6.5" fill="#3DE0FF"/>
+      </symbol>
+    </defs>
+  </svg>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="nav" id="top">
+    <a class="brand" href="#top" aria-label="Pharos Works, home">
+      <svg class="brand-mark" aria-hidden="true"><use href="#mark"/></svg>
+      <span class="brand-name">Pharos Works</span>
     </a>
-    <nav aria-label="Main"><a href="#who">Who we build for</a><a href="#pricing">Pricing</a><a href="#contact">Contact</a></nav>
-  </div>
-</header>
 
-<main id="main">
-<div class="hero">
-  <div class="wrap">
-    <div>
-      <h1>Websites that stay up. Live uptime, shown.</h1>
-      <p>Fast, secure sites for cafes, gyms, clinics and other local businesses in Pune. Every site comes with a public status page, so you can see for yourself that it is online.</p>
-      <a class="btn" href="https://cal.com/pharosworks/site-check">Book a free site check</a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="#approach">Approach</a>
+      <a href="#who">Who it is for</a>
+      <a href="#process">Process</a>
+      <a href="#pricing">Pricing</a>
+      <a class="btn btn-small" href="#contact">Get a free check</a>
+    </nav>
+
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="menu" aria-label="Open menu">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <div class="menu" id="menu" hidden>
+    <nav aria-label="Mobile">
+      <a href="#approach">Approach</a>
+      <a href="#who">Who it is for</a>
+      <a href="#process">Process</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <p class="menu-foot">Pune, India. Replies within one working day.</p>
+  </div>
+
+  <main id="main">
+    <section class="hero">
+      <div class="hero-copy">
+        <h1>Websites that stay online.</h1>
+        <p class="lead">We build fast, secure websites for local businesses in Pune, then watch them around the clock. If your site goes down, we know before your customers do.</p>
+        <div class="cta-row">
+          <a class="btn" href="#contact">Get a free site check</a>
+          <a class="btn btn-ghost" href="#pricing">See pricing</a>
+        </div>
+        <p class="hero-note" id="statusNote" hidden>
+          <span class="dot" aria-hidden="true"></span>
+          <a id="statusLink" href="#">View our live uptime page</a>
+        </p>
+      </div>
+
+      <div class="hero-art">
+        <figure class="terminal">
+          <div class="term-bar" aria-hidden="true"><i></i><i></i><i></i><span>pharos-works / production</span></div>
+          <pre class="term-body" aria-label="Example of how every site goes live: push the code, build passes, deploy, HTTPS on, uptime monitor starts."><code><span class="ln l1"><b class="prompt">$</b> git push origin main</span>
+<span class="ln l2"><b class="ok">ok</b>  build passed</span>
+<span class="ln l3"><b class="ok">ok</b>  deployed to production</span>
+<span class="ln l4"><b class="ok">ok</b>  https enabled</span>
+<span class="ln l5"><b class="live"></b>  uptime monitor watching, checks every 5 min</span></code></pre>
+          <figcaption>How every site we ship goes live.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section" id="approach">
+      <h2>A website is only useful when it is up.</h2>
+      <p class="section-intro">Most small business sites are built once and left alone. Ours are built to be looked after.</p>
+
+      <div class="rows">
+        <article class="row">
+          <h3>Fast on a phone</h3>
+          <p>Most of your customers will open your site on mobile data, standing outside your door. We keep pages light and layouts simple so they load quickly and read clearly on a small screen.</p>
+        </article>
+        <article class="row">
+          <h3>Secure by default</h3>
+          <p>Every site runs on HTTPS, with sensible security settings and a copy of your site kept safe in version control. Your contact form is protected against spam from day one.</p>
+        </article>
+        <article class="row">
+          <h3>Watched around the clock</h3>
+          <p>Each site is checked every few minutes by an uptime monitor. If it stops responding, we get an alert and start fixing it, without waiting for you to notice.</p>
+        </article>
+        <article class="row">
+          <h3>Yours to keep</h3>
+          <p>You own your content and your domain. Clear handover notes, plain-language pricing, and no long lock-in contract.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="who">
+      <h2>Built for businesses people visit.</h2>
+      <p class="section-intro">If customers search for you, check your timings, or message to book, a good website saves you time every day.</p>
+
+      <ul class="niches">
+        <li><strong>Cafes and restaurants</strong><span>Menu, opening hours, location, and table enquiries in one place.</span></li>
+        <li><strong>Gyms and studios</strong><span>Plans, class timetable, trainer profiles, and a trial-session form.</span></li>
+        <li><strong>Clinics</strong><span>Doctor profiles, services, clinic timings, and appointment requests.</span></li>
+        <li><strong>Coaching classes</strong><span>Batches, fees, results, and an enquiry form that reaches you directly.</span></li>
+        <li><strong>Salons and spas</strong><span>Service list with prices, a photo gallery, and booking requests.</span></li>
+        <li><strong>Home bakers and makers</strong><span>Product gallery, order form, and delivery details, so orders stop getting lost in DMs.</span></li>
+      </ul>
+    </section>
+
+    <section class="section" id="process">
+      <h2>How a project runs.</h2>
+      <ol class="steps">
+        <li>
+          <h3>Free site check</h3>
+          <p>Book a short call. We look at what you have now, or what you need, and tell you honestly what to do first.</p>
+        </li>
+        <li>
+          <h3>Design and build</h3>
+          <p>You approve the look and the content. We build it, test it on phones, and make it fast.</p>
+        </li>
+        <li>
+          <h3>Launch</h3>
+          <p>We connect your domain, switch on HTTPS and monitoring, and hand over everything you need.</p>
+        </li>
+        <li>
+          <h3>Care</h3>
+          <p>Optional monthly plan: updates, backups, and someone to call when something looks wrong.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section class="section" id="pricing">
+      <h2>Clear pricing, in rupees.</h2>
+      <p class="section-intro">These are starting ranges. You get a fixed quote after the free check, before any work begins.</p>
+
+      <div class="plans">
+        <article class="plan">
+          <h3>Starter</h3>
+          <p class="price">₹6,000 to ₹10,000</p>
+          <p class="plan-for">A single page that makes you easy to find and easy to contact.</p>
+          <ul>
+            <li>One-page mobile-first site</li>
+            <li>Contact form and map</li>
+            <li>HTTPS and hosting setup</li>
+            <li>Uptime monitoring</li>
+          </ul>
+        </article>
+
+        <article class="plan plan-featured">
+          <h3>Standard</h3>
+          <p class="price">₹12,000 to ₹20,000</p>
+          <p class="plan-for">A complete small business site for most cafes, clinics, and classes.</p>
+          <ul>
+            <li>Up to five pages</li>
+            <li>Booking or enquiry flow</li>
+            <li>Basic search visibility setup</li>
+            <li>Photo gallery and reviews section</li>
+            <li>Uptime monitoring</li>
+          </ul>
+        </article>
+
+        <article class="plan">
+          <h3>Growth</h3>
+          <p class="price">₹25,000 to ₹40,000</p>
+          <p class="plan-for">For businesses that want online orders, bookings, or a stronger brand.</p>
+          <ul>
+            <li>Custom design</li>
+            <li>Online ordering or booking integration</li>
+            <li>Visitor analytics</li>
+            <li>Speed and security tuning</li>
+            <li>Uptime monitoring</li>
+          </ul>
+        </article>
+      </div>
+
+      <p class="care"><strong>Care plan, ₹500 to ₹1,500 a month.</strong> Backups, small content changes, security updates, and priority help if anything breaks. Optional, and cancel any time.</p>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="contact-copy">
+        <h2>Let us look at your website.</h2>
+        <p class="section-intro">Tell us about your business. We reply within one working day, with a few honest suggestions you can use even if you never hire us.</p>
+        <a class="btn btn-ghost" href="https://cal.com/pharosworks/site-check" target="_blank" rel="noopener">Book a free site check</a>
+        <p class="small">Prefer to talk first? Pick a time and we will send a video call link.</p>
+      </div>
+
+      <form class="form" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="f26bfbc1-7fd9-490b-9bb1-7922df44ab37">
+        <input type="hidden" name="subject" value="New enquiry from Pharos Works website">
+        <input type="hidden" name="from_name" value="Pharos Works website">
+        <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+        <label for="name">Your name</label>
+        <input id="name" name="name" type="text" autocomplete="name" required>
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" autocomplete="email" required>
+
+        <label for="business">Business name and type</label>
+        <input id="business" name="business" type="text" placeholder="For example, Sunrise Cafe, Baner" required>
+
+        <label for="message">What do you need?</label>
+        <textarea id="message" name="message" rows="4" placeholder="A new site, a faster one, bookings, or something else"></textarea>
+
+        <button class="btn" type="submit" id="submitBtn">Send message</button>
+        <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-brand">
+      <svg class="brand-mark" aria-hidden="true"><use href="#mark"/></svg>
+      <span class="brand-name">Pharos Works</span>
     </div>
-    <svg class="art" viewBox="0 0 240 320" role="img" aria-label="Lighthouse with a light beam">
-      <defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#F5A623" stop-opacity="0"/><stop offset="1" stop-color="#F5A623" stop-opacity=".55"/></linearGradient></defs>
-      <g class="beam"><path d="M120 70L-120 20V120Z" fill="url(#g)"/></g>
-      <path d="M96 300l14-190h20l14 190z" fill="#F4F1EA"/>
-      <path d="M103 215h34l-2 26h-30zM109 150h22l-2 26h-18z" fill="#F5A623"/>
-      <rect x="104" y="84" width="32" height="26" rx="3" fill="#F5A623"/>
-      <path d="M100 84l20-20 20 20z" fill="#F4F1EA"/>
-      <path d="M40 304c20-14 50-18 80-18s60 4 80 18v16H40z" fill="#17335c"/>
-    </svg>
-  </div>
-</div>
-
-<section id="who">
-  <div class="wrap">
-    <h2>Who we build for</h2>
-    <p class="lead">Small businesses that get most of their customers from Instagram, Google Maps and word of mouth, and need a site that works as well on a phone as it does on a laptop.</p>
-    <dl class="who">
-      <div><dt>Cafes</dt><dd>Menu, opening hours, map, and a table enquiry form.</dd></div>
-      <div><dt>Gyms</dt><dd>Class timetable, plans, trainer profiles, and trial session requests.</dd></div>
-      <div><dt>Clinics</dt><dd>Doctors, timings, services, and appointment requests.</dd></div>
-      <div><dt>Coaching classes</dt><dd>Batches, results, fees, and demo class bookings.</dd></div>
-      <div><dt>Salons and studios</dt><dd>Services, price list, gallery, and booking requests.</dd></div>
-      <div><dt>Home bakers and small shops</dt><dd>Product catalogue and order enquiries.</dd></div>
-    </dl>
-    <p class="note">Sample sites for each type are in progress. Book a free site check and we will show you what yours could look like.</p>
-    <ul class="includes">
-      <li>A public status page for your site, so downtime never goes unnoticed.</li>
-      <li>Built light, with no heavy frameworks, so pages open fast on mobile data.</li>
-      <li>HTTPS on every site.</li>
-      <li>A contact form that sends enquiries straight to your email.</li>
-    </ul>
-  </div>
-</section>
-
-<section id="pricing" class="pricing">
-  <div class="wrap">
-    <h2>Pricing</h2>
-    <p class="lead">One-time prices for Pune businesses. The final quote comes after your free site check.</p>
-    <div class="tablewrap">
-      <table>
-        <thead><tr><th scope="col">Plan</th><th scope="col">What you get</th><th scope="col">Price</th></tr></thead>
-        <tbody>
-          <tr><th scope="row">Starter</th><td>One-page site, mobile friendly, contact form, status page, one round of edits.</td><td class="price">₹6,000 to ₹10,000</td></tr>
-          <tr><th scope="row">Standard</th><td>Up to five pages, booking or enquiry flow, Google Maps, basic search setup, two rounds of edits.</td><td class="price">₹12,000 to ₹20,000</td></tr>
-          <tr><th scope="row">Growth</th><td>Custom features such as online ordering or memberships, analytics, and 30 days of support after launch.</td><td class="price">₹25,000 to ₹40,000</td></tr>
-          <tr><th scope="row">Care plan</th><td>Uptime monitoring, backups, small edits, and help with domain and hosting.</td><td class="price">₹500 to ₹1,500 per month</td></tr>
-        </tbody>
-      </table>
-    </div>
-    <p class="note">Domain names and paid hosting, if your site needs them, are billed at cost.</p>
-  </div>
-</section>
-
-<section id="contact">
-  <div class="wrap">
-    <h2>Contact</h2>
-    <p class="lead">Tell us about your business. We reply by email.</p>
-    <form id="form" action="https://api.web3forms.com/submit" method="POST">
-      <input type="hidden" name="access_key" value="f26bfbc1-7fd9-490b-9bb1-7922df44ab37">
-      <input type="hidden" name="subject" value="New enquiry from Pharos Works site">
-      <input type="hidden" name="from_name" value="Pharos Works site">
-      <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off">
-      <label>Your name<input name="name" required autocomplete="name"></label>
-      <label>Email<input type="email" name="email" required autocomplete="email"></label>
-      <label>Type of business
-        <select name="business_type"><option>Cafe</option><option>Gym</option><option>Clinic</option><option>Coaching class</option><option>Salon or studio</option><option>Other</option></select>
-      </label>
-      <label>Message<textarea name="message" required></textarea></label>
-      <button class="btn" type="submit">Send message</button>
-      <p id="msg" role="status" aria-live="polite"></p>
-    </form>
-    <div class="book">
-      <p>Prefer a call? Book 15 minutes on Google Meet. We will check your current site or Instagram page and tell you what to fix first.</p>
-      <a class="btn" href="https://cal.com/pharosworks/site-check">Book a free site check</a>
-    </div>
-  </div>
-</section>
-</main>
-
-<footer>
-  <div class="wrap">
-    <span>© 2026 Pharos Works, Pune</span>
-    <!-- After UptimeRobot setup: put your status page URL in href and delete the hidden attribute. -->
-    <a id="status" href="#" hidden>Live status</a>
-  </div>
-</footer>
-
-<script>
-const f=document.getElementById('form'),m=document.getElementById('msg');
-f.addEventListener('submit',async e=>{
-  e.preventDefault();m.textContent='Sending…';
-  try{
-    const r=await fetch(f.action,{method:'POST',headers:{Accept:'application/json'},body:new FormData(f)});
-    const d=await r.json();
-    if(d.success){m.textContent='Message sent. We will reply by email.';f.reset()}
-    else throw 0
-  }catch(_){m.textContent='Message not sent. Email pharosworks.dev@gmail.com instead.'}
-});
-</script>
+    <p>Websites for local businesses in Pune, India.</p>
+    <p class="footer-links">
+      <a href="#approach">Approach</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#contact">Contact</a>
+      <a id="footerStatus" href="#" hidden>Uptime status</a>
+    </p>
+    <p class="copy">&copy; 2026 Pharos Works</p>
+  </footer>
 </body>
 </html>
